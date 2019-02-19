@@ -9,4 +9,4 @@ coupons = db.coupons
 
 all_customers = customers.find()
 for i in all_customers:
-    pprint(i).encode('utf8')
+    pprint(i.encode('utf8'))
