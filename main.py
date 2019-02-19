@@ -5,6 +5,12 @@ from pprint import pprint
 import sys
 import collections
 
+#Setup MongoDB Conn
+client = MongoClient()
+db = client.test
+customers = db.customers
+coupons = db.coupons
+
 #Convert a dict to UTF8
 def convert(data):
     if isinstance(data, basestring):
@@ -16,14 +22,18 @@ def convert(data):
     else:
         return data
 
-#Setup MongoDB Conn
-client = MongoClient()
-db = client.test
-customers = db.customers
-coupons = db.coupons
+def searchCustomer(column, keyWord):
+    foundCustomers = customers.find({ {}: "{}" }.format(column, keyWord)))
+    for i in foundCustomers:
+    i = convert(i)
+    pprint(i)
 
 #Print all customers
 all_customers = customers.find()
 for i in all_customers:
     i = convert(i)
     pprint(i)
+
+print hiero
+
+searchCustomer("firstname", "Jane")
