@@ -15,12 +15,6 @@ def convert(data):
     else:
         return data
 
-class MyPrettyPrinter(pprint.PrettyPrinter):
-    def format(self, object, context, maxlevels, level):
-        if isinstance(object, unicode):
-            return (object.encode('utf8'), True, False)
-        return pprint.PrettyPrinter.format(self, object, context, maxlevels, level)
-
 client = MongoClient()
 db = client.test
 customers = db.customers
@@ -28,4 +22,5 @@ coupons = db.coupons
 
 all_customers = customers.find()
 for i in all_customers:
-    MyPrettyPrinter(i)
+    i = convert(i)
+    pprint(i)
