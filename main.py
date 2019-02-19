@@ -25,8 +25,8 @@ def convert(data):
 def searchCustomer(column, keyWord):
     foundCustomers = customers.find({ {}: "{}" }.format(column, keyWord))
     for i in foundCustomers:
-    i = convert(i)
-    pprint(i)
+        i = convert(i)
+        pprint(i)
 
 #Print all customers
 all_customers = customers.find()
