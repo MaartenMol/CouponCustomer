@@ -2,6 +2,7 @@ import pymongo
 from pymongo import MongoClient
 from pprint import pprint
 import json
+import sys
 
 client = MongoClient()
 db = client.test
