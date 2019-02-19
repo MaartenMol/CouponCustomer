@@ -7,5 +7,5 @@ db = client.test
 customers = db.customers
 coupons = db.coupons
 
-pprint.pprint(customers.find_one().pretty())
-pprint.pprint(coupons.find_one().pretty())
+pprint.pprint(customers.find().pretty())
+pprint.pprint(coupons.find().pretty())
