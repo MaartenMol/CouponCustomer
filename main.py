@@ -23,7 +23,7 @@ def convert(data):
         return data
 
 def searchCustomer(column, keyWord):
-    foundCustomers = customers.find({ {}: "{}" }.format(column, keyWord))
+    foundCustomers = customers.find({ {}: {} }.format(column, keyWord))
     for i in foundCustomers:
         i = convert(i)
         pprint(i)
@@ -34,4 +34,4 @@ def searchCustomer(column, keyWord):
 #    i = convert(i)
 #    pprint(i)
 
-searchCustomer("firstname", "Jane")
+searchCustomer(firstname, Jane)
