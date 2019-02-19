@@ -7,10 +7,6 @@ db = client.test
 customers = db.customers
 coupons = db.coupons
 
-#print('hoi')
-#print(customers.find())
-
-jane = customers.find({'firstname': 'Jane'})
-for i in jane:
+all_customers = customers.find()
+for i in all_customers:
     pprint(i)
-#print(jane)
