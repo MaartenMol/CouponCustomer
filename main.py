@@ -3,6 +3,7 @@ from pymongo import MongoClient
 from pprint import pprint
 import json
 import sys
+import collections
 
 def convert(data):
     if isinstance(data, basestring):
