@@ -8,7 +8,7 @@ customers = db.customers
 coupons = db.coupons
 
 print('hoi')
-print(db.customers.find())
+print(customers.find())
 pprint.pprint(db.customers.find().pretty())
 pprint.pprint(coupons.find())
 
