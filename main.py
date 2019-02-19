@@ -28,4 +28,4 @@ coupons = db.coupons
 
 all_customers = customers.find()
 for i in all_customers:
-    MyPrettyPrinter().pprint(i)
+    MyPrettyPrinter(i)
