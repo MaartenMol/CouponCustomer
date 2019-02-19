@@ -42,6 +42,9 @@ def searchCoupons(column, keyWord):
 #    i = convert(i)
 #    pprint(i)
 
+pprint(Zoeken naar Jane)
 searchCustomer("firstname", "Jane")
-
-searchCoupons("status", "1")
+pprint(Zoeken naar alle ongeregistreerde coupons)
+searchCoupons("status", "0")
+pprint(Zoeken naar alle coupons van Jane)
+searchCoupons("customer_id", "5c6c1d49a990cde0ca31a23e")
