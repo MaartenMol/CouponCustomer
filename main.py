@@ -36,4 +36,4 @@ def searchCustomer(column, keyWord):
 #    i = convert(i)
 #    pprint(i)
 
-searchCustomer(firstname, Jane)
+searchCustomer("firstname", "Jane")
