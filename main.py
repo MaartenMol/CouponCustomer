@@ -24,8 +24,6 @@ def convert(data):
 
 #Search customers
 def searchCustomer(column, keyWord):
-    print column
-    print keyWord
     foundCustomers = customers.find({ column: keyWord })
     for i in foundCustomers:
         i = convert(i)
@@ -33,8 +31,6 @@ def searchCustomer(column, keyWord):
 
 #Search coupons
 def searchCoupons(column, keyWord):
-    print column
-    print keyWord
     foundCoupons = coupons.find({ column: keyWord })
     for i in foundCoupons:
         i = convert(i)
