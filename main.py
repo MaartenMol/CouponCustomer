@@ -25,7 +25,7 @@ def convert(data):
 def searchCustomer(column, keyWord):
     print column
     print keyWord
-    foundCustomers = customers.find({ '{}: {}' }).format(column, keyWord)
+    foundCustomers = customers.find({ column: keyWord })
     for i in foundCustomers:
         i = convert(i)
         pprint(i)
