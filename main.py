@@ -9,5 +9,5 @@ coupons = db.coupons
 #print('hoi')
 #print(customers.find())
 
-all_customers = customers.find()
-print(all_customers)
+jane = customers.find_one({'firstname': 'Jane'}
+print(jane)
