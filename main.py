@@ -44,4 +44,4 @@ def searchCoupons(column, keyWord):
 
 searchCustomer("firstname", "Jane")
 
-searchCoupons("status", "0")
+searchCoupons("status", "1")
