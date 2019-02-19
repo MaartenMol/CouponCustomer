@@ -7,6 +7,6 @@ db = client.test
 customers = db.customers
 coupons = db.coupons
 
-all_customers.encode('utf8') = customers.find()
+all_customers = customers.find()
 for i in all_customers:
-    pprint(i)
+    pprint(i).encode('utf8')
