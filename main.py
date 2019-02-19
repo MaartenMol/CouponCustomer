@@ -10,4 +10,6 @@ coupons = db.coupons
 #print(customers.find())
 
 jane = customers.find({'firstname': 'Jane'})
-print(jane)
+for i in jane:
+    print i
+#print(jane)
