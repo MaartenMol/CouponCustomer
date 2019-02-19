@@ -12,4 +12,4 @@ coupons = db.coupons
 all_customers = customers.find()
 for i in all_customers:
     #pprint(i)
-    json.dump(i, sys.stdout)
+    json.dump(i)
