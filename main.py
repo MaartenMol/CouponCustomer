@@ -1,5 +1,6 @@
 import pymongo
 from pymongo import MongoClient
+from pprint import pprint
 
 client = MongoClient()
 db = client.test
@@ -11,5 +12,5 @@ coupons = db.coupons
 
 jane = customers.find({'firstname': 'Jane'})
 for i in jane:
-    print i
+    pprint(i)
 #print(jane)
