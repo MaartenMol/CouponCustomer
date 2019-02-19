@@ -29,11 +29,9 @@ def searchCustomer(column, keyWord):
         pprint(i)
 
 #Print all customers
-all_customers = customers.find()
-for i in all_customers:
-    i = convert(i)
-    pprint(i)
-
-print hiero
+#all_customers = customers.find()
+#for i in all_customers:
+#    i = convert(i)
+#    pprint(i)
 
 searchCustomer("firstname", "Jane")
