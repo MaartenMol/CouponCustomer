@@ -26,10 +26,13 @@ def convert(data):
 
 #Search customers
 def searchCustomer(column, keyWord):
+    data = ''
     foundCustomers = customers.find({ column: keyWord })
     for i in foundCustomers:
         i = convert(i)
+        data += i
         pprint(i)
+    return data
 
 #Search coupons
 def searchCoupons(column, keyWord):
@@ -37,6 +40,13 @@ def searchCoupons(column, keyWord):
     for i in foundCoupons:
         i = convert(i)
         pprint(i)
+
+#Add customer
+def addCustomer(firstname, lastname, email):
+    searchCustomer("email", email)
+    postData = { "firstname": firstname, "lastname": lastname, "email": email }
+    result = customers.insert_one(postData)
+    print('Added Customer: {0}'.format(result.inserted_id))
 
 #Add coupons
 #Status 0 = unregistrered, 1 = registrered to user, 2 = used by user
